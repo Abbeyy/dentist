@@ -14,5 +14,13 @@ export const Home = () => (
         {STRINGS.companyName}
       </h1>
     </div>
+
+    <div className="flex flex-col lg:flex-row flex-1 mx-[10rem] lg:space-x-[6rem] flex-row py-[4rem] lg:justify-evenly">
+      <p className="flex flex-1 text-black text-lg text-justify tracking-normal">{`Our team of expert dentists and hygienists uses the latest technology and techniques to provide you with the best care possible.`}</p>
+
+      <p className="flex flex-1 pt-[2rem] lg:pt-0 text-black text-lg text-justify tracking-normal">{`Don't wait any longer to take care of your dental health - schedule an appointment with us today!`}</p>
+
+      <p className="flex flex-1 pt-[2rem] lg:pt-0 text-black text-lg text-justify tracking-normal">{`We understand that visiting the dentist can be stressful. We strive to create a welcoming and comfortable environment for our patients.`}</p>
+    </div>
   </div>
 );
