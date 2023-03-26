@@ -1,5 +1,9 @@
 import { STRINGS } from "../../../constants/strings";
 import header from "../../../assets/home-header.jpeg";
+import { RiUserSmileFill } from "react-icons/ri";
+import { GiToothbrush } from "react-icons/gi";
+import { FaBaby } from "react-icons/fa";
+import { MdLocalPharmacy, MdFamilyRestroom } from "react-icons/md";
 
 export const Home = () => (
   <div className="flex flex-col">
@@ -21,6 +25,33 @@ export const Home = () => (
       <p className="flex flex-1 pt-[2rem] lg:pt-0 text-black text-lg text-justify tracking-normal">{`Don't wait any longer to take care of your dental health - schedule an appointment with us today!`}</p>
 
       <p className="flex flex-1 pt-[2rem] lg:pt-0 text-black text-lg text-justify tracking-normal">{`We understand that visiting the dentist can be stressful. We strive to create a welcoming and comfortable environment for our patients.`}</p>
+    </div>
+
+    <div className="flex flex-1 flex-grow flex-row self-center space-x-[3%] mx-[2rem] ml-[7rem]">
+      <div className="flex shadow-lg w-[15%] max-w-[10rem] flex-col bg-primary px-2 py-3 rounded-lg items-center">
+        <RiUserSmileFill color={"white"} size={30} />
+        <label className="text-white font-semibold text-center mt-4">{`Cosmetic Dentistry`}</label>
+      </div>
+
+      <div className="flex shadow-lg w-[15%] max-w-[10rem] flex-col bg-primary px-2 py-3 rounded-lg items-center">
+        <FaBaby color="white" size="30" />
+        <label className="text-white font-semibold text-center mt-4">{`Children's Dentistry`}</label>
+      </div>
+
+      <div className="flex shadow-lg w-[15%] max-w-[10rem] flex-col bg-primary px-2 py-3 rounded-lg items-center">
+        <MdFamilyRestroom color="white" size="30" />
+        <label className="text-white font-semibold text-center mt-4">{`Family Dentistry`}</label>
+      </div>
+
+      <div className="flex shadow-lg w-[15%] max-w-[10rem] flex-col bg-primary px-2 py-3 rounded-lg items-center">
+        <MdLocalPharmacy color="white" size="30" />
+        <label className="text-white font-semibold text-center mt-4">{`NHS Dentistry`}</label>
+      </div>
+
+      <div className="flex shadow-lg w-[15%] max-w-[10rem] flex-col bg-primary px-2 py-3 rounded-lg items-center">
+        <GiToothbrush color="white" size="30" />
+        <label className="text-white font-semibold text-center mt-4">{`Preventative Dentistry`}</label>
+      </div>
     </div>
   </div>
 );
