@@ -4,7 +4,10 @@ import "./App.css";
 import styles from "./app-styles.module.css";
 import { BaseLayout } from "./components/layouts/baseLayout";
 import { Error } from "./components/layouts/baseLayout/error";
-import { Landing } from "./components/baseElements/landing.tsx";
+import { Home } from "./components/baseElements/home";
+import { ContactUs } from "./components/baseElements/contactUs";
+import { AboutUs } from "./components/baseElements/aboutUs";
+import { Services } from "./components/baseElements/services";
 
 function App() {
   return (
@@ -12,7 +15,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<BaseLayout />}>
-            <Route index path={"home"} element={<Landing />} />
+            <Route index path={"home"} element={<Home />} />
+            <Route path={"contact-us"} element={<ContactUs />} />
+            <Route path={"about-us"} element={<AboutUs />} />
+            <Route path={"services"} element={<Services />} />
 
             {/* Any non-match */}
             <Route path="*" element={<Error />} />
