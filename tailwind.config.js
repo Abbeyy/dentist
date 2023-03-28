@@ -6,13 +6,19 @@ module.exports = {
     extend: {
       backgroundColor: (theme) => ({
         primary: "#01606F",
+        secondary: "#96D1CF",
       }),
       textColor: (theme) => ({
         primary: "#01606F",
+        secondary: "#96D1CF",
       }),
       borderColor: (theme) => ({
         primary: "#01606F",
+        secondary: "#96D1CF",
       }),
+      fontFamily: {
+        mukta: ["Mukta", "sans-serif"],
+      },
     },
     screens: {
       //min-width's
