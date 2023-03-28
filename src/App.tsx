@@ -5,7 +5,6 @@ import styles from "./app-styles.module.css";
 import { BaseLayout } from "./components/layouts/baseLayout";
 import { Error } from "./components/layouts/baseLayout/error";
 import { Home } from "./components/baseElements/home";
-import { ContactUs } from "./components/baseElements/contactUs";
 import { AboutUs } from "./components/baseElements/aboutUs";
 import { Services } from "./components/baseElements/services";
 
@@ -16,7 +15,6 @@ function App() {
         <Routes>
           <Route path="/" element={<BaseLayout />}>
             <Route index path={"home"} element={<Home />} />
-            <Route path={"contact-us"} element={<ContactUs />} />
             <Route path={"about-us"} element={<AboutUs />} />
             <Route path={"services"} element={<Services />} />
 

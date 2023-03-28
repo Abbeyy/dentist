@@ -1,15 +1,27 @@
+import { useState } from "react";
 import { Outlet } from "react-router-dom";
+import { ContactUs } from "../../baseElements/contactUs";
 import { Footer } from "../../baseElements/footer";
 import { NavBar } from "../../baseElements/navbar";
 
-export const BaseLayout = () => (
-  <div className={"flex flex-1 flex-col bg-white"}>
-    <NavBar />
+export const BaseLayout = () => {
+  const [showDrawer, setShowDrawer] = useState(false);
 
-    <div className="flex flex-1 flex-col h-full w-full">
-      <Outlet />
+  const openDrawer = () => setShowDrawer(true);
+
+  const closeDrawer = () => setShowDrawer(false);
+
+  return (
+    <div className={"flex flex-1 flex-col bg-white"}>
+      <NavBar openDrawer={openDrawer} />
+
+      <div className="flex flex-1 flex-col h-full w-full">
+        <Outlet />
+      </div>
+
+      <Footer />
+
+      <ContactUs showDrawer={showDrawer} closeDrawer={closeDrawer} />
     </div>
-
-    <Footer />
-  </div>
-);
+  );
+};

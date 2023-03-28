@@ -1,6 +1,12 @@
 import { useNavigate } from "react-router-dom";
 
-export const NavBar = () => {
+type Props = {
+  openDrawer: () => void;
+};
+
+export const NavBar = (props: Props) => {
+  const { openDrawer } = props;
+
   const navigate = useNavigate();
 
   const handleMenuClick = (route: string) =>
@@ -43,7 +49,7 @@ export const NavBar = () => {
 
         <div className="relative flex items-center">
           <button
-            onClick={() => handleMenuClick("contact-us")}
+            onClick={openDrawer}
             className="font-semibold text-xl text-black hover:text-neutral-500 focus:text-neutral-700"
           >
             Contact Us
