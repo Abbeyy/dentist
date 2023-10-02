@@ -11,8 +11,10 @@ export const ContactUs = (props: Props) => {
   }
 
   return (
-    <div
-      className="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform bg-primary w-80"
+    <aside
+      className={`fixed top-0 right-0 z-40 h-screen p-4 transform overflow-auto ease-in-out transition-all duration-300 bg-primary w-80 ${
+        showDrawer ? "translate-x-0" : "-translate-x-full"
+      }`}
       aria-labelledby="drawer-label"
     >
       <h5 className="inline-flex items-center mb-4 text-base font-semibold text-white">
@@ -30,6 +32,6 @@ export const ContactUs = (props: Props) => {
       <div className="grid grid-cols-2 gap-4">
         <p>form here</p>
       </div>
-    </div>
+    </aside>
   );
 };

@@ -6,7 +6,6 @@ import { BaseLayout } from "./components/layouts/baseLayout";
 import { Error } from "./components/layouts/baseLayout/error";
 import { Home } from "./components/baseElements/home";
 import { AboutUs } from "./components/baseElements/aboutUs";
-import { Services } from "./components/baseElements/services";
 
 function App() {
   return (
@@ -16,7 +15,6 @@ function App() {
           <Route path="/" element={<BaseLayout />}>
             <Route index path={"home"} element={<Home />} />
             <Route path={"about-us"} element={<AboutUs />} />
-            <Route path={"services"} element={<Services />} />
 
             {/* Any non-match */}
             <Route path="*" element={<Error />} />

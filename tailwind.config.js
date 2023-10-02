@@ -17,7 +17,7 @@ module.exports = {
         secondary: "#96D1CF",
       }),
       fontFamily: {
-        mukta: ["Mukta", "sans-serif"],
+        lato: ["Lato", "sans-serif"],
       },
     },
     screens: {

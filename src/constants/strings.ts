@@ -6,5 +6,5 @@ export const STRINGS = {
     town: "Llanedeyrn",
     country: "Wales",
   },
-  footerSlogan: "Your teeth are in safe hands with us",
+  footerSlogan: "The cure for dental anxiety. The home of radiant smiles.",
 };
