@@ -4,7 +4,11 @@ import { ContactUs } from "../../baseElements/contactUs";
 import { Footer } from "../../baseElements/footer";
 import { NavBar } from "../../baseElements/navbar";
 
-export const BaseLayout = () => {
+export const BaseLayout = ({
+  children,
+}: {
+  children?: JSX.Element | JSX.Element[] | null;
+}) => {
   const [showDrawer, setShowDrawer] = useState(false);
 
   const openDrawer = () => setShowDrawer(true);
@@ -17,6 +21,7 @@ export const BaseLayout = () => {
 
       <div className="flex flex-1 flex-col h-full w-full">
         <Outlet />
+        {!!children && children}
       </div>
 
       <Footer />
