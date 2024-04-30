@@ -1,4 +1,8 @@
 import { useNavigate } from "react-router-dom";
+import { FaHome } from "react-icons/fa";
+import { FaPeopleGroup } from "react-icons/fa6";
+import { PiPhoneCallFill } from "react-icons/pi";
+import { useLayoutEffect, useState } from "react";
 
 type Props = {
   openDrawer: () => void;
@@ -8,6 +12,20 @@ export const NavBar = (props: Props) => {
   const { openDrawer } = props;
 
   const navigate = useNavigate();
+
+  const [dimensions, setDimensions] = useState<{
+    width: number;
+    height: number;
+  }>({ width: window.innerWidth, height: window.innerHeight });
+
+  useLayoutEffect(() => {
+    const onResize = () => {
+      const { innerWidth: width, innerHeight: height } = window;
+      setDimensions({ width, height });
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
 
   const handleMenuClick = (route: string) =>
     navigate(`/${route.toLowerCase()}`);
@@ -23,17 +41,19 @@ export const NavBar = (props: Props) => {
             <li>
               <button
                 onClick={() => handleMenuClick("home")}
-                className="font-semibold text-xl text-teal-800 focus:text-teal-600 hover:bg-neutral-100 py-2 px-4 rounded-md"
+                className="flex items-center gap-2 font-semibold text-lg text-teal-800 focus:text-teal-600 hover:bg-neutral-100 py-2 px-4 rounded-md"
               >
-                Home
+                <FaHome size={22} />
+                <>{dimensions.width > 550 ? "HOME" : ""}</>
               </button>
             </li>
             <li>
               <button
                 onClick={() => handleMenuClick("about-us")}
-                className="font-semibold text-xl text-teal-800 focus:text-teal-600 hover:bg-neutral-100 py-2 px-4 rounded-md"
+                className="flex items-center gap-2 font-semibold text-lg text-teal-800 focus:text-teal-600 hover:bg-neutral-100 py-2 px-4 rounded-md"
               >
-                About Us
+                <FaPeopleGroup size={22} />
+                <>{dimensions.width > 550 ? "ABOUT US" : ""}</>
               </button>
             </li>
           </ul>
@@ -42,9 +62,10 @@ export const NavBar = (props: Props) => {
         <div className="relative flex items-center">
           <button
             onClick={openDrawer}
-            className="font-semibold text-xl text-teal-800 hover:bg-neutral-100 py-2 px-4 rounded-md focus:text-neutral-700"
+            className="flex items-center gap-2 font-semibold text-xl text-teal-800 hover:bg-neutral-100 py-2 px-4 rounded-md focus:text-neutral-700"
           >
-            Contact Us
+            <PiPhoneCallFill size={22} />
+            <>{dimensions.width > 550 ? "CONTACT US" : ""}</>
           </button>
         </div>
       </div>
