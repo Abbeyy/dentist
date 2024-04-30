@@ -11,12 +11,12 @@ export const AboutUs = () => (
       className="flex w-full max-h-[20rem] object-cover object-top"
     />
 
-    <div className="flex flex-col px-40 py-20 space-y-10">
+    <div className="flex flex-col px-[2rem] xs:px-[4rem] md:px-40 py-20 space-y-10">
       <div className="flex flex-col">
         <p className="flex capitalize self-start font-medium tracking-wider text-teal-800 text-sm">
           Family-run dentist clinic in South Wales
         </p>
-        <h1 className="flex self-start font-medium tracking-wider text-teal-800 text-6xl">
+        <h1 className="flex self-start font-medium tracking-wider text-teal-800 text-3xl md:text-6xl">
           Your smile makes a lasting impression
         </h1>
       </div>
@@ -48,18 +48,18 @@ export const AboutUs = () => (
         </p>
       </div>
 
-      <span className="h-[0.5px] pt-10 border-b-[0.5px] border-teal-800 w-full w-[80%] self-center" />
+      <span className="h-[0.5px] pt-4 md:pt-10 border-b-[0.5px] border-teal-800 w-full w-[80%] self-center" />
 
-      <div className="flex flex-col pt-10 w-full space-y-10">
-        <h1 className="flex self-start font-medium tracking-wider text-teal-800 text-6xl">
+      <div className="flex flex-col pt-4 md:pt-10 w-full space-y-10">
+        <h1 className="flex self-start font-medium tracking-wider text-teal-800 text-3xl md:text-6xl">
           Meet the team
         </h1>
-        <div className="flex flex-row w-full justify-evenly space-x-5">
+        <div className="flex md:no-wrap flex-wrap flex-row w-full justify-evenly gap-[2rem]">
           <div className="flex flex-col justify-center text-center space-y-4">
             <img
               alt="clinic owner"
               src={employee1}
-              className="flex w-[200px] drop-shadow h-[200px] object-cover object-middle rounded-full"
+              className="flex w-[200px] h-[200px] max-w-[200px] max-h-[200px] drop-shadow object-cover object-middle rounded-full"
             />
             <div className="flex flex-col space-y-2 justify-center items-center text-center">
               <label className="text-slate-700 uppercase font-medium tracking-wider">
@@ -75,7 +75,7 @@ export const AboutUs = () => (
             <img
               alt="apprentice"
               src={employee2}
-              className="flex w-[200px] drop-shadow h-[200px] object-cover object-middle rounded-full"
+              className="flex w-[200px] h-[200px] max-w-[200px] max-h-[200px] drop-shadow object-cover object-middle rounded-full"
             />
             <div className="flex flex-col space-y-2 justify-center text-center">
               <label className="text-slate-700 uppercase font-medium tracking-wider">
@@ -91,7 +91,7 @@ export const AboutUs = () => (
             <img
               alt="dentist"
               src={employee3}
-              className="flex w-[200px] drop-shadow h-[200px] object-cover object-middle rounded-full"
+              className="flex w-[200px] h-[200px] max-w-[200px] max-h-[200px] drop-shadow object-cover object-middle rounded-full"
             />
             <div className="flex flex-col space-y-2 justify-center text-center">
               <label className="text-slate-700 uppercase font-medium tracking-wider">
